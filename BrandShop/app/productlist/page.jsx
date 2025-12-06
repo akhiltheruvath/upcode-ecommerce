@@ -1,6 +1,6 @@
 import ProductCard from "./productcard"; 
 
-export default async function Home() {
+export default async function Product() {
   try {
     const res = await fetch("https://dummyjson.com/products", {
       cache: "no-store",
@@ -11,7 +11,7 @@ export default async function Home() {
     }
 
     const data = await res.json();
-    const products = data.products; // DummyJSON always returns inside "products"
+    const products = data.products;
 
     return (
       <div style={{ display: "flex", flexWrap: "wrap" }}>
